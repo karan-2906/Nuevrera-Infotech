@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="input.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Company Sign up</title>
+</head>
+<body class="dark:bg-gray-900">
+    <section>
+        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0">
+            <h1 class="text-3xl text-solid text-white font-bold my-4 mt-10 ">
+            Sign up as Employer
+            </h1>
+            <div class="w-full max-w-4xl p-6 space-y-8 sm:p-8 rounded-lg shadow dark:bg-gray-800">
+                <div>
+                    <h2 class="text-2xl text-white font-bold">Create Your Account</h2>
+                    <a href="Candidatesignup.html" class="text-blue-500 hover:underline ">Sign up as Employee</a>
+                </div>
+                <form>
+                    <div>
+                        <div class="flex  text-left">
+                            <label for="name" name="name" class="text-dm block m-2 w-1/5 text-white font-semibold"> Create Username</label>
+                            <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter your name" required>
+                        </div><br>
+                        <div class="flex  text-center">
+                            <label for="name" name="name" class="text-dm block m-2 w-1/5 text-white font-semibold"> Password</label>
+                            <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter your name" required>
+                        </div><br>
+                        <a class="text-white font-bold"> Company's Details</a>
+                        <div class="rounded-lg border dark:border-gray-600  w-full max-w-4xl p-6 space-y-1 sm:p-8 dark:bg-gray-700  " >
+                            <div class="flex  text-left">
+                                <label for="cname" name="cname" class="text-dm block m-2 w-1/5 text-white font-semibold">Name *</label>
+                                <input type="text" name="cname" id="cname" class="bg-gray-50 border  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Company Name" required>
+                            </div>
+                            <div class="flex  text-left">
+                                <label for="sector" name="sector" class="text-dm block m-2 w-1/5 text-white font-semibold"> Industry *</label>
+                                <input type="text" name="sector" id="sector" class="bg-gray-50 border  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Company Sector" required>
+                            </div>
+                            <div class="flex  text-left">
+                                <label for="Address" name="Address" class="text-dm block m-2 w-1/5 text-white font-semibold"> Overview *</label>
+                                <input type="text" name="Address" id="Address" class="bg-gray-50 border  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Company Overview">
+                            </div>
+                            <br>
+                            <hr>
+                            <a class="text-white font-bold px-5"> Additional Details</a>
+                            <hr>
+                            <br>
+                            <div class="flex  text-left">
+                                <label for="Address" name="Address" class="text-dm block m-2 w-1/5 text-white font-semibold"> Website</label>
+                                <input type="text" name="Address" id="Address" class="bg-gray-50 border  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Company Website (if any)" required>
+                            </div>
+                            <div class="flex  text-left">
+                                <label for="Address" name="Address" class="text-dm block m-2 w-1/5 text-white font-semibold"> Size</label>
+                                <input type="text" name="Address" id="Address" class="bg-gray-50 border  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Company Size">
+                            </div>
+                            <div class="flex  text-left">
+                                <label for="Address" name="Address" class="text-dm block m-2 w-1/5 text-white font-semibold"> Location</label>
+                                <input type="text" name="Address" id="Address" class="bg-gray-50 border  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Company Location" required>
+                            </div>
+                            <div class="flex  text-left">
+                                <label for="Address" name="Address" class="text-dm block m-2 w-1/5 text-white font-semibold"> Logo</label>
+                                <input type="file" name="" placeholder="Company Logo" class="ml-2 my-auto place-self-auto w-full bg-gray-800  rounded-lg border border-gray-300 text-white" />
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <a class="text-white font-bold"> Contact Information</a>
+                        <div class="rounded-lg border dark:border-gray-600  w-full max-w-4xl p-6 space-y-1 sm:p-8 dark:bg-gray-700  " >
+                            <div class="flex  text-left">
+                                <label for="Address" name="Address" class="text-dm block m-2 w-1/5 text-white font-semibold"> Name *</label>
+                                <input type="text" name="Address" id="Address" class="bg-gray-50 border  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Contact Name" required>
+                            </div>
+                            <div class="flex  text-left">
+                                <label for="contactno" name="contactno" class="text-dm block m-2 w-1/5 text-white font-semibold"> Phone Number *</label>
+                                <input type="text" name="contactno" id="contactno" class="bg-gray-50 border  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Contact Number" required>
+                            </div>
+                            <div class="flex  text-left">
+                                <label for="email" name="email" class="text-dm block m-2 w-1/5 text-white font-semibold"> Email Address *</label>
+                                <input type="email" name="email" id="email" class="bg-gray-50 border  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Contact email" required>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <button type="submit" class="bg-blue-500 text-white font-bold rounded-lg p-2.5 mt-4 w-full  hover:bg-blue-700" >
+                          Create an account
+                        </button>
+                      </div>
+          
+                      <!-- direct login -->
+          
+                      <div class="mt-4">
+                        <a href="login.html" class="text-blue-500 hover:text-blue-700 hover:underline" >Already have an account? Login</a >
+                        </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
