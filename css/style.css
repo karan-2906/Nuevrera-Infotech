@@ -1,0 +1,127 @@
+#cv-template {
+    display: none;
+
+}
+
+.myimg {
+    border: 1px solid red;
+    border-radius: 50%;
+    width: 200px;
+}
+
+
+
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+#navbar{
+    
+    background-color:#333;
+
+    font-family: 'Yeon Sung' ;
+    /* position: sticky; */
+    
+}
+#navbar ul{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    height: 50px;
+
+}
+#navbar li{
+    list-style: none;
+}
+#navbar li a{ 
+    text-decoration: none;
+    padding: 13px 30px;
+    font-size: 22px;
+    color: white;
+    /* transition: all .5s /ease; */
+}
+#navbar li a:hover{
+    color:black; 
+    text-shadow: yellow;
+    box-shadow: 0 0 10px, white;
+    background-color: white;
+    border-radius: 5px;
+
+}
+
+#video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+
+
+@media print {
+    .print-button {
+        display: none;
+    }
+
+    body {
+        background-color: #fff;
+        /* Set a white background for printing */
+    }
+
+    #cv-form {
+        display: none;
+        /* Hide the CV form in the print version */
+    }
+
+    /* Adjust the font size and layout for printing */
+    #cv-template {
+        display: block;
+        /* Show the CV template in the print version */
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Set the two-column layout for the CV template */
+    .bg{
+        color: aqua;
+    }
+    .row {
+        display: flex;
+    }
+
+    .col-md-4 {
+        flex: 0 0 50%;
+        /* Set each column to occupy 50% width of the container */
+    }
+
+    .col-md-8 {
+        flex: 0 0 50%;
+    }
+    #navbar ul{
+        display: flex;
+        flex-direction: row;
+        /* justify-content: center; */
+        align-items: center;
+        height: 50px;
+    
+    }
+    #navbar li{
+        list-style: none;
+    }
+    #navbar li a{ 
+        text-decoration: none;
+        padding: 13px 30px;
+        font-size: 22px;
+        color: white;
+        /* transition: all .5s /ease; */
+    }
+}
