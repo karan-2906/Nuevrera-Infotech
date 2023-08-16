@@ -5,13 +5,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="input.css" />
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/print.css" media="print"> Add this line for the print-specific CSS -->
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <title>Resume Builder</title>
    
 </head>
 
 <body class="dark:bg-gray-900">
-    <section>
+    <form id="cv-form">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0">
             <h1 class="text-3xl text-solid text-white font-bold my-4 mt-10">
                 Resume/CV Builder
@@ -20,43 +25,38 @@
                 <div>
                     <h2 class="text-2xl text-white font-bold">Create Your Resume/CV</h2>
                 </div>
-                <form>
-                    <div>
-                        <label for="name" name="name" class="text-dm block mb-2 text-white font-semibold">
-                            Enter your Name *</label>
-                        <input type="text" name="name" id="username"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                            placeholder="Enter your name" required />
-                        <br />
-                    </div>
+                <form><div class="flex">
+                    <label for="name" name="name" class="text-dm mr-2 mb-1 block text-white font-semibold">
+                        Enter your Name *</label>
+                    <input type="text" id="username" placeholder="Name" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-2/3 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                </div>
+                <div class="flex">
+                    <label for="email" name="email" id="email"
+                                    class="text-dm block mr-2 mb-1 text-white font-semibold">
+                                    Email Address *</label>
+                    <input type="email" id="useremail" placeholder="Email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-2/3 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                </div>
                     <div>
                         <a class="text-white font-bold"> Contact Information</a>
                         <div
-                            class="rounded-lg border dark:border-gray-600 w-full max-w-4xl p-6 space-y-1 sm:p-8 dark:bg-gray-700">
+                            class="rounded-lg border dark:border-gray-600 space-y-2 w-full max-w-4xl p-6 sm:p-8 dark:bg-gray-700">
                             <div class="flex text-left ">
                                 <label for="contactno" name="contactno" id="userphoto"
                                     class="text-dm block m-2 w-1/5 text-white font-semibold">
                                     Upload Your Photo *</label>
                                 <div >
-                                    <input type="file" name="" id="" class="  bg-gray-800 w-full rounded-lg border border-gray-300 text-white" />
+                                    <input type="file" name="" id="imgField" class="  bg-gray-800 w-full rounded-lg border border-gray-300 text-white" />
                                 
                                     </div>
                             </div>
-                            <div class="flex text-left">
-                                <label for="email" name="email" id="email"
-                                    class="text-dm block m-2 w-1/5 text-white font-semibold">
-                                    Email Address *</label>
-                                <input type="email" name="email" id="useremail"
-                                    class="bg-gray-50 border text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    placeholder="Enter Email Address" required />
-                            </div>
+                            
                             <div class="flex text-left">
                                 <label for="contactno" name="contactno" id="contactno"
                                     class="text-dm block m-2 w-1/5 text-white font-semibold">
                                     Phone Number *</label>
                                 <input type="text" name="contactno" id="userphone"
                                     class="bg-gray-50 border text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    placeholder="Enter Contact Number" required />
+                                    placeholder="Enter Contact Number"  />
                             </div>
                             <div class="flex text-left">
                                 <label for="Address" name="Address" id="Address"
@@ -79,20 +79,20 @@
                                     Date Of Birth *</label>
                                 <input type="date" name="dob" id="dob"
                                     class="bg-gray-50 border text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    placeholder="Date of Birth" required />
+                                    placeholder="Date of Birth"  />
                             </div>
                             <!-- <div class="flex  text-left">
                                 <label for="language" name="language" class="text-dm block m-2 w-1/3 text-white font-semibold"> preferred Language*</label>
-                                <input type="text" name="language" id="language" class="bg-gray-50 border  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter Language" required>
+                                <input type="text" name="language" id="language" class="bg-gray-50 border  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter Language" >
                             </div> -->
-                            <div>
+                            <!-- <div>
                                 <label for="name" name="name" class="text-dm block mb-2 text-white font-semibold">
                                     Enter Links</label>
                                 <div class=" justify-center items-center" id="Link">
                                     <div class="flex mb-2">
                                     <input type="text" name="name" id="inputFieldsContainer"
                                         class="bg-gray-50 border border-white text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                        placeholder="Enter Link" required />
+                                        placeholder="Enter Link"  />
                                     <button type="button" id="addInputButton" onclick="add()"
                                         class="bg-blue-500 ml-2 text-white font-bold rounded-lg p-2 w-32 hover:bg-blue-700">
                                         Add Link
@@ -104,10 +104,28 @@
                                 const addlink = document.getElementById("Link")
                                 function add(){
                                     console.log("")
-                                    addlink.innerHTML += '<div class="flex mb-2 justify-center items-center" id="Link"> <input type="text" name="name" id="inputFieldsContainer" class="bg-gray-50 border border-white text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter Link" required> <button type="button" id="addInputButton" onclick="add()" class="bg-blue-500 ml-2    text-white font-bold rounded-lg p-2 w-32  hover:bg-blue-700">Add Link</button> </div>'
+                                    addlink.innerHTML += '<div class="flex mb-2 justify-center items-center" id="Link"> <input type="text" name="name" id="inputFieldsContainer" class="bg-gray-50 border border-white text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-white dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter Link" > <button type="button" id="addInputButton" onclick="add()" class="bg-blue-500 ml-2    text-white font-bold rounded-lg p-2 w-32  hover:bg-blue-700">Add Link</button> </div>'
                                 }        
                             </script>
+                        </div> -->
+
+                        <div class="form-group mt-2 flex">
+                            <label for="objField" class="text-dm m-2 block  text-white font-semibold">Objective</label>
+                            <textarea type="text" id="objField" placeholder="Enter here" class="form-control bg-gray-50 aqField border text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                        </textarea>
+                            </div>
+                    
+                        <p class="text-dm text-center mt-4 block m-2 text-white font-semibold">&lt;---Important Links---></p>
+                        <div class="form-group mt-2 flex">
+                            <label for="fbField" class="text-dm m-2 block  text-white font-semibold">Facebook</label>
+                            <input type="text" id="fbField" placeholder="Enter here" class="form-control bg-gray-50 aqField border text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                         </div>
+                       
+                        <div class="form-group mt-2 flex">
+                            <label for="linkedField" class="text-dm m-2 block  text-white font-semibold">LinkedIn</label>
+                            <input type="text" id="linkedField" placeholder="Enter here" class="form-control bg-gray-50 aqField border text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                        </div>
+                    </div>
                     </div>
                     <br />
                     <div>
@@ -117,19 +135,13 @@
                             <div class="flex text-left">
                                 <label for="qualificatiion" name="qualificatiion" id="qualificatiion"
                                     class="text-dm block m-2 w-1/5 text-white font-semibold">
-                                    Qualification *</label>
-                                <input type="text" name="qualificatiion" id="userqualificatiion"
+                                    Qualifications *</label>
+                                    <textarea type="text" name="userqualificatiion " id="userqualificatiion"
                                     class="bg-gray-50 border text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    placeholder="Highest level of qualification" required />
+                                    placeholder="Enter your Address" rows="2" >
+                                </textarea>
                             </div>
-                            <div class="flex text-left">
-                                <label for="institute" name="institute" id="institute"
-                                    class="text-dm block m-2 w-1/5 text-white font-semibold">
-                                    Institute *</label>
-                                <input type="text" name="institute" id="userinstitute"
-                                    class="bg-gray-50 border text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    placeholder="Institute Attended" required />
-                            </div>
+                           
                             <div class="flex text-left">
                                 <label for="special" name="special" id="special"
                                     class="text-dm block m-2 w-1/5 text-white font-semibold">
@@ -145,63 +157,107 @@
                         <a class="text-white font-bold"> Work Experience</a>
                         <div
                             class="rounded-lg border dark:border-gray-600 mb-2 w-full max-w-4xl p-6 space-y-1 sm:p-8 dark:bg-gray-700">
-                            <input type="radio" name="option" value="option1" id="option1" checked />
-                            <label for="option1" class="text-white font-semibold m-2 mr-20">Fresher</label>
-                            <input type="radio" name="option" value="option2" id="option2" />
-                            <label for="option2" class="text-white font-semibold m-2">Experienced</label>
-                            <div id="content"></div>
-                            <script>
-                                document.addEventListener("DOMContentLoaded", function () {
-                                    const contentDiv = document.getElementById("content");
-
-                                    // Get references to the radio buttons
-                                    const option1Radio = document.getElementById("option1");
-                                    const option2Radio = document.getElementById("option2");
-
-                                    // Add event listeners to the radio buttons
-                                    option1Radio.addEventListener("change", function () {
-                                        if (option1Radio.checked) {
-                                            // Update the content based on the selected option
-                                            contentDiv.innerHTML =
-                                                '<p class="text-white font-semibold mt-2">Welcome, All The Best For Your First Experience</p>';
-                                        }
-                                    });
-
-                                    option2Radio.addEventListener("change", function () {
-                                        if (option2Radio.checked) {
-                                            // Update the content based on the selected option
-                                            contentDiv.innerHTML =
-                                                ' <div class="flex  text-left mt-4"> <label for="years"  name="years" class="text-dm block m-2 w-1/5 text-white font-semibold"> No. of years *</label> <input type="text" name="years" id="expyear" class="bg-gray-50 border  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Years of Experience"> </div> <br> <div class="flex  text-left"> <label for="company" name="company" class="text-dm block m-2 w-1/5 text-white font-semibold"> Employer *</label> <input type="text" name="company" id="expcompany" class="bg-gray-50 border  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Name of Company"> </div> <br> <div class="flex  text-left"> <label for="title" name="title" class="text-dm block m-2 w-1/5 text-white font-semibold"> Job Title *</label> <input type="text" name="title" id="exptitle" class="bg-gray-50 border  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Job Title/Position"> </div> ';
-                                        }
-                                    });
-
-                                    // Initialize the content based on the default selection
-                                    if (option1Radio.checked) {
-                                        contentDiv.innerHTML =
-                                            '<p class="text-white font-semibold mt-2">Welcome, All The Best For Your First Experience</p>';
-                                    }
-                                });
-                            </script>
+                            <div class="flex text-left">
+                                <label for="qualificatiion" name="experience" id="exp"
+                                    class="text-dm block m-2 w-1/5 text-white font-semibold">
+                                    Experiences *</label>
+                                    <textarea type="text" name="userqualificatiion " id="userqualificatiion"
+                                    class="bg-gray-50 border text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                    placeholder="Enter your Address" rows="2" >
+                                </textarea>
+                            </div>
                         </div>
                     </div>
-                    <br />
-                    <div>
-                        <button type="button" onclick="conprint()">
-                            Dummy button
-                        </button>
-                    </div>
-                    <div>
-                        <button type="submit" onclick="conprint()"
-                            class="bg-blue-500 text-white font-bold rounded-lg p-2.5 mt-4 w-full hover:bg-blue-700">
-                            Create Resume/CV
-                        </button>
+                 
+                    
+                    <div class="container text-center my-5">
+                        <button id="generateBtn" type="button" class="bg-blue-500 text-white font-bold rounded-lg p-2.5 mt-4 w-full hover:bg-blue-700">                            Generate CV</button>
                     </div>
 
                     <!-- direct login -->
                 </form>
             </div>
         </div>
-    </section>
+    </form>
+
+
+
+
+<!-- #template -->
+
+
+
+
+
+<div class="container" id="cv-template" style="display: none;">
+    <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+                <img id="imgTemplate" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzCb4DonWw5pT1-A3Su9HzG6TTN4nMOmj7tg&usqp=CAU"
+                    alt="" class="img-fluid myimg justify-center items-center ml-32" />
+                <div class="container text-white mt-10 space-y-4 text-xl">
+                    <h1>Name: <span id="1username" ></span></h1>
+                    <p>Email: <span id="1useremail"></span></p>
+                    <p>Contact No.<p id="1userphone">+91 8846814867, +91 8789918189</p></p>
+                  
+                    <hr>
+                    <p class="text-base"> Address<p id="1useraddress" >464 Edyth Islands, Vermont, US, 54352-0758</p></p>
+                   <p class="text-base">LinkedIn: <span id="linkedT"></span></p>
+                    <p class="text-base">Facebook: <span id="fbT"></span></p>
+
+                </div>
+            </div>
+            <div class="col-md-8 py-5">
+                <h1 id="2username" class="text-center text-3xl text-solid text-white font-bold my-4 mt-10" >
+                Karan Gandhi</h1>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="obj">To secure an entry-level position in a reputable company where I can apply my
+                            [relevant skills/education] and gain valuable experience in [desired field]. I am a
+                            dedicated and quick learner with a strong work ethic, excellent problem-solving abilities,
+                            and a passion for [relevant field/industry]. I am eager to contribute to a dynamic team and
+                            grow both professionally and personally.</p>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="1userexp">Internship at XYZ Company</p>
+                        
+                        
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body" >
+                        <div class="card-body">
+                            <p id="1qualificatiion">To secure an entry-level position in a reputable company where I can apply my
+                                [relevant skills/education] and gain valuable experience in [desired field]. I am a
+                                dedicated and quick learner with a strong work ethic, excellent problem-solving abilities,
+                                and a passion for [relevant field/industry]. I am eager to contribute to a dynamic team and
+                                grow both professionally and personally.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Move the "Print CV" button here, outside the "Academic Qualification" section -->
+                <div class="container mt-3 text-center print-button">
+                    <button id="printBtn" type="button" style="display: none;">Print CV</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
     <script src="nuv.js"></script>
 </body>
 
